@@ -59,10 +59,7 @@ function larger(a, b) {
 
 function largest(arr) {
   const filteredArr = arr.filter(item => item !== null);
-  if (filteredArr.length === 0) {
-    return null;
-  }
-  return filteredArr.reduce((max, current) => (current > max ? current : max), filteredArr[0]);
+  return filteredArr.length === 0 ? null : Math.max(...filteredArr);
 }
 
 function compare(a, b) {
