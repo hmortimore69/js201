@@ -14,19 +14,100 @@
 
 function id() {
   // e.g. return "UP654321";
+  return "UP2203185";
 }
 
 function fn() {
-  return 'Replace This With Your First Name';
+  return 'Harvey';
 }
 
 function sn() {
-  return 'Replace This With Your Surname';
+  return 'Mortimore';
 }
 
-function example() {
-  // replace this example with
-  // your first function then
-  // add more below as necessary.
+function add(a, b) {
+  return a + b;
+}
 
+function subtract(a, b) {
+  return a - b;
+}
+
+function checkObject(obj) {
+  obj.checked = true;
+}
+
+function checkObjectInside(obj) {
+  if (obj.data) {
+    obj.data.checked = true;
+  }
+}
+
+function arraySet(arr, i, n) {
+  if (arr[i]) {
+    arr[i] = n;
+  }
+}
+
+function addAll(arr) {
+  return arr.reduce((a, b) => a + b, 0);
+}
+
+function larger(a, b) {
+  return a > b ? a : b;
+}
+
+function largest(arr) {
+  const filteredArr = arr.filter(item => item !== null);
+  if (filteredArr.length === 0) {
+    return null;
+  }
+  return filteredArr.reduce((max, current) => (current > max ? current : max), filteredArr[0]);
+}
+
+function compare(a, b) {
+  if (a.length !== b.length) {
+    return false;
+  }
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function addToAll(arr, n) {
+  arr.forEach((item, index) => {
+    arr[index] = item + n;
+  });
+
+  return arr;
+}
+
+let remembered = null;
+function rememberThis(keepsake) {
+  remembered = keepsake;
+}
+
+function nArray(n) {
+  return Array.from({ length: n }, (_, i) => i + 1);
+}
+
+function addAllOpt(arr) {
+  if (!arr || arr.length === 0) {
+    return 0;
+  }
+
+  return arr.reduce((a, b) => a + b);
+}
+
+function divisors(arr, div) {
+  return arr.filter(item => item % div === 0);
+}
+
+function multiples(n, m) {
+  return Array.from({ length: n }, (_, i) => m * (i + 1));
 }
