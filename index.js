@@ -49,7 +49,7 @@ function arraySet(arr, i, n) {
 }
 
 function addAll(arr) {
-  return arr.reduce((accumulator, curr) => accumulator + curr, 0);
+  return arr.reduce((accumulator, curr) => accumulator + curr);
 }
 
 function larger(a, b) {
@@ -85,7 +85,7 @@ function nArray(n) {
 
 function addAllOpt(arr) {
   if (!arr || arr.length === 0) return 0;
-  return arr.reduce((accumulator, curr) => accumulator + curr, 0);
+  return arr.reduce((accumulator, curr) => accumulator + curr);
 }
 
 function divisors(arr, div) {
